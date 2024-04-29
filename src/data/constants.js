@@ -5,6 +5,7 @@ import registration from "../asset/images/Registration-form.png"
 import calculator from "../asset/images/calculator.png"
 import dice from "../asset/images/random-dice-game.png"
 import weather from "../asset/images/weather-app.png"
+import weather from "../asset/images/netflix.png"
 
 export const Bio = {
   name: "Manish Verma",
