@@ -312,6 +312,17 @@ export const projects = [
     category: "web app",
     github: "https://github.com/Manish12-verma/Qr-code-generator",
   },
+  {
+    id:8,
+    title:"netflix-clone",
+    date: "April 2023",
+    description:"Google Auth: Firebase Authentication,Firestore: Database Management,Redux: State Management,API: TMDB for movie data,UI: Netflix-like interface playback, genres.,Testing & Deployment: Thorough testing, deployment on vercel",
+    image: netflix,
+    tags:["React","firebase","API","UI","Firebase Auth","Vercel"],
+    category:"web app",
+    github:"https://github.com/Manish12-verma/netflix-clone-frontEnd",
+    webapp:"https://netflix-clone-front-end-pdtr-manish12-vermas-projects.vercel.app/",
+  },
 ];
 
 export const TimeLineData = [
