@@ -218,7 +218,7 @@ export const education = [
     img: "https://play-lh.googleusercontent.com/E9LAXXpa4i2B7crUysF10qI4BUtOpIsnhyuGPMXCQbEnkq2hcDRipr9OI2zI7D14aAGH=w600-h300-pc0xffffff-pd",
     school: "ST. XAVIER'S SCHOOL,Belthara Road,Ballia ",
     date: "Apr 2017 - Apr 2018",
-    grade: "76%%",
+    grade: "76%",
     desc: "I completed my class 10 education at ST. XAVIER'S SCHOOL, Belthara Road , where I studied Science.",
     degree: "CBSE(X), Science",
   },
