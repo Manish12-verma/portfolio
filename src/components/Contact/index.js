@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -125,21 +125,29 @@ const ContactButton = styled.input`
 const Contact = () => {
 
   //hooks
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [error, setError] = useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const email = form.current.user_email.value;
+
+    if (!email) {
+      setError('Email is required');
+      return;
+    }
+
     emailjs.sendForm('service_4dz40h7', 'template_lbqjgv6', form.current, '4LfRLiRP7nA1TV0Ft')
       .then((result) => {
         setOpen(true);
         form.current.reset();
+        setError('');
       }, (error) => {
         console.log(error.text);
       });
       e.target.reset();
   }
-
 
 
   return (
@@ -150,6 +158,7 @@ const Contact = () => {
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Get In Touch 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="user_email" />
+          {error && <p style={{ color: 'red' }}>{error}</p>}
           <ContactInput placeholder="Your Name" name="user_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
